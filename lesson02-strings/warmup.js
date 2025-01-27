@@ -1,4 +1,7 @@
 // 1. given a string with three characters, return the second character
+const returnSeconCharacter = (string) => {
+  return string[1];
+};
 
 // 2. get the second and third char from a string. the string will always have atleast three characters
 
