@@ -5,12 +5,20 @@
 //    - est: 1995
 //    - libraries: ["React", "Angular", "Vue"]
 
+const myObject = {
+  name: "JavaScript",
+  est: 1995,
+  libraries: ["React", "Angular", "Vue"],
+};
+
 // 2. Log the `myObject` object to the console.
+// console.log(myObject);
 
 // 3. Store the keys of `myObject` in a variable called `myObjectKeys`.
-
+const myObjectKeys = Object.keys(myObject);
 // 4. Log the `myObjectKeys` variable to the console.
-
+console.log(myObjectKeys);
 // 5. Store the values of `myObject` in a variable called `myObjectValues`.
-
+const myObjectValues = Object.values(myObject);
 // 6. Log the `myObjectValues` variable to the console.
+console.log(myObjectValues);
