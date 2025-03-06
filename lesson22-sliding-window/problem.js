@@ -11,4 +11,24 @@
 
 module.exports = function maxSubArraySum(arr, subArrLength) {
   // your code here
+  if(subArrLength > arr.length) return null; //[1, 2, 3], 4 => null
+  let maxSum = 0;
+  let tempSum = 0
+
+  // loop from the first element to the subArrLength element (exclusive) => our windonw size
+  for(let i = 0; i < subArrLength; i++){
+    maxSum += arr[i]
+  }
+
+  // update the tempSum to the maxSum
+  tempSum = maxSum
+
+    // Slide the window across the array
+    for (let i = subArrLength; i < arr.length; i++) {
+      tempSum = tempSum - arr[i - subArrLength] + arr[i]; // Subtract outgoing element, add incoming element
+      maxSum = Math.max(maxSum, tempSum); // Update maxSum if needed
+    }
+  
+    return maxSum;
+
 };
